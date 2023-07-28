@@ -1,0 +1,15 @@
+div#logo {
+  position: relative;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+div#logo #twitter{
+  position: absolute;
+  max-width: 115px;
+  transform: rotate(-100deg);
+  width: 50px;
+  top: 53px;
+  left: 3px;
+}

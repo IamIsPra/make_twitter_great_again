@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Make Twitter Great Again",
+  "version": "1.0",
+  "description": "A Chrome Extension is a simple and lightweight extension that allows users to replace the new X logo on Twitter with the classic Twitter bird logo.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/img/icon-16.png",
+      "32": "assets/img/icon-32.png",
+      "48": "assets/img/icon-48.png",
+      "128": "assets/img/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/img/icon-16.png",
+    "32": "assets/img/icon-32.png",
+    "48": "assets/img/icon-48.png",
+    "128": "assets/img/icon-128.png"
+  },
+  "background": {
+    "service_worker": "assets/js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["assets/js/content_script.js"]
+    }
+  ]
+}
